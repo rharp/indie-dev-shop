@@ -11,13 +11,17 @@ pipeline {
         }
         stage('Transfering Files') {
         	 steps {
-                echo 'Transfering..'
+        				echo 'Transfering..'
                 sh 'rm -rf ../html'
                 sh 'mkdir ../html'
                 sh 'cp -r ./ ../html'
-                sh 'ssh -vv jenkins@dev.indiedevstudio.com echo testing connection || true'
-                sh 'rsync -avz -e ssh ../html/ jenkins@dev.indiedevshop.com:/var/www/'
-            }
+        	 			sshagent ( ['JenkinsSSHKey']) {
+        	 			sh '''
+                ssh -vv jenkins@dev.indiedevstudio.com echo testing connection || true
+                '''
+								}
+						}
         }
     }
 }
+
