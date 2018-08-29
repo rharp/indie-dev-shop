@@ -15,6 +15,7 @@ pipeline {
                 sh 'rm -rf ../html'
                 sh 'mkdir ../html'
                 sh 'cp -r ./ ../html'
+						 		sh 'su ubuntu'
 						 		sh 'ssh jenkins@dev.indiedevshop.com rm -rf /var/www/temp_deploy/dist/'
 						 		sh 'ssh jenkins@dev.indiedevshop.com mkdir -p /var/www/temp_deploy'
 						 		sh 'scp -r ../html jenkins@dev.indiedevshop.com:/var/www/temp_deploy/dist/'
