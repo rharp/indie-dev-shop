@@ -1,6 +1,11 @@
 #!/usr/bin/env groovy
 
 pipeline {
+		agent {
+    	node {
+        label 'my-defined-label'
+    	}
+		}
     stages {
         stage('Build') {
             steps {
