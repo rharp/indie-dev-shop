@@ -17,9 +17,9 @@ pipeline {
         				sshagent(['JenkinsSSHKey']) {
                 	sh '''
                      alias dev="ssh -o StrictHostKeyChecking=no ubuntu@dev.indiedevshop.com"
-                     dev "rm -rf /var/www/temp_deploy"
-                     dev "mkdir -p /var/www/temp_deploy"
-                     scp -o StrictHostKeyChecking=no -r ./ ubuntu@dev.indiedevshop.com:/var/www/temp_deploy/drupal
+                     dev "rm -rf /var/www/html/temp_deploy"
+                     dev "mkdir -p /var/www/html/temp_deploy"
+                     scp -o StrictHostKeyChecking=no -r ./ ubuntu@dev.indiedevshop.com:/var/www/html/temp_deploy/drupal
                      dev "rm -rf /var/www/html/drupal/ && mv /var/www/temp_deploy/drupal/ /var/www/html/"
                 '''
                 }
