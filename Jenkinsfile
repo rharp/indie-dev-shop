@@ -15,10 +15,7 @@ pipeline {
                 sh 'rm -rf ../html'
                 sh 'mkdir ../html'
                 sh 'cp -r ./ ../html'
-						 		sh 'ssh -i  /home/ubuntu/.ssh/id_rsa jenkins@dev.indiedevshop.com rm -rf /var/www/temp_deploy/dist/'
-						 		sh 'ssh -i  /home/ubuntu/.ssh/id_rsa jenkins@dev.indiedevshop.com mkdir -p /var/www/temp_deploy'
-						 		sh 'scp -r ../html jenkins@dev.indiedevshop.com:/var/www/temp_deploy/dist/'
-						 		sh 'ssh -i  /home/ubuntu/.ssh/id_rsa jenkins@dev.indiedevshop.com “rm -rf /var/www/example.com/dist/ && mv /var/www/temp_deploy/dist/ /var/www/example.com/”'
+						 		sh 'ssh -i  /home/ubuntu/.ssh/id_rsa jenkins@dev.indiedevshop.com -o StrictHostKeyChecking=no rm -rf /var/www/temp_deploy/dist/'
 						}
         }
     }
