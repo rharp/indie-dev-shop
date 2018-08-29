@@ -1,11 +1,7 @@
 #!/usr/bin/env groovy
 
 pipeline {
-		agent {
-    	docker {
-        image 'ubuntu:16.04'
-    	}
-		}
+		agent any
     stages {
         stage('Build') {
             steps {
