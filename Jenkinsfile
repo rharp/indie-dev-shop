@@ -2,8 +2,8 @@
 
 pipeline {
 		agent {
-    	node {
-        label 'my-defined-label'
+    	docker {
+        image 'ubuntu:16.04'
     	}
 		}
     stages {
