@@ -12,9 +12,9 @@ pipeline {
         stage('Transfering Files') {
         	 steps {
         				echo 'Transfering..'
-                wrap([$class: 'BuildUser']) {
-                          sh 'echo "${BUILD_USER}"'
-                        }
+                sshagent(['JenkinsSSHKey']) {
+                   sh 'ssh -o StrictHostKeyChecking=no jenkins@dev.indiedevshop.com'
+                }
 						}
         }
     }
