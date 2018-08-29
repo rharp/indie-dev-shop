@@ -15,8 +15,8 @@ pipeline {
                 sh 'rm -rf ../html'
                 sh 'mkdir ../html'
                 sh 'cp -r ./ ../html'
-        	 			sshagent ( ['JenkinsSSHKey']) {
-        	 			sh 'scp ../html jenkins@dev.indiedevshop.com:/var/www/'
+        	 			sshagent ( credentials: ['JenkinsSSHKey']) {
+        	 			sh 'ssh jenkins@dev.indiedevshop.com echo testing connection'
 								}
 						}
         }
