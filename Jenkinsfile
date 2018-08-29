@@ -12,9 +12,9 @@ pipeline {
         stage('Transfering Files') {
         	 steps {
                 echo 'Transfering..'
+                sh 'sudo rm -rf ../html'
                 sh 'mkdir ../html'
                 sh 'cp -r ./ ../html'
-                sh 'sudo rm -rf ../html'
                 sh 'ssh jenkins@dev.indiedevshop.com'
                 sh 'sudo rm -rf /var/www/html'
                 sh 'exit'
