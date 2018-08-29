@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Transfering Files') {
         	 steps {
-        				echo '$BUILD_USER'
+        				sh 'echo '$BUILD_USE''
 						}
         }
     }
