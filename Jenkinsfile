@@ -16,9 +16,7 @@ pipeline {
                 sh 'mkdir ../html'
                 sh 'cp -r ./ ../html'
         	 			sshagent ( ['JenkinsSSHKey']) {
-        	 			sh '''
-                ssh -vv jenkins@dev.indiedevstudio.com echo testing connection || true
-                '''
+        	 			sh 'scp ../html jenkins@dev.indiedevshop.com:/var/www/'
 								}
 						}
         }
