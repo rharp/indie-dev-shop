@@ -12,6 +12,7 @@ pipeline {
         stage('Transfering Files') {
         	 steps {
         				echo 'Transfering..'
+        				sh 'rm -rf ./html'
                 sh 'mkdir ./html'
                 sh 'cp -r ./ ./html'
         				sshagent(['JenkinsSSHKey']) {
@@ -23,7 +24,6 @@ pipeline {
                      dev "rm -rf /var/www/example.com/dist/ && mv /var/www/temp_deploy/dist/ /var/www/html/"
                 '''
                 }
-                sh 'rm -rf ./html'
 						}
         }
     }
