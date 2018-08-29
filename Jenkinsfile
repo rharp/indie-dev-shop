@@ -16,7 +16,7 @@ pipeline {
                 sh 'mkdir ../html'
                 sh 'cp -r ./ ../html'
                 sh 'alias dev="ssh jenkins@dev.indiedevstudio.com"'
-                sh 'dev "rm -rf /var/www/html"'
+                sh 'dev "echo 'in shell' "'
                 sh 'rsync -avz -e ssh ../html/ jenkins@dev.indiedevshop.com:/var/www/'
             }
         }
