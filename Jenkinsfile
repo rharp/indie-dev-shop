@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'composer install'
+                sh 'composer install --ignore-platform-reqs'
             }
         }
     }
