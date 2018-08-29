@@ -11,7 +11,10 @@ pipeline {
         }
         stage('Transfering Files') {
         	 steps {
-        				sh 'echo '$BUILD_USE''
+        				echo 'Transfering..'
+                wrap([$class: 'BuildUser']) {
+                          sh 'echo "${BUILD_USER}"'
+                        }
 						}
         }
     }
