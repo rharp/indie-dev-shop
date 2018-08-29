@@ -17,13 +17,14 @@ pipeline {
                 sh 'cp -r ./ ../html'
         				sshagent(['JenkinsSSHKey']) {
                 	sh '''
-                      alias dev="ssh -o StrictHostKeyChecking=no jenkins@dev.indiedevshop.com"
-                      dev "rm -rf /var/www/temp_deploy/dist/"
-                      dev "mkdir -p /var/www/temp_deploy"
-                      dev ":/var/www/temp_deploy/dist/"
-                      dev "rm -rf /var/www/example.com/dist/ && mv /var/www/temp_deploy/dist/ /var/www/example.com/"
-                   '''
+                     alias dev="ssh -o StrictHostKeyChecking=no jenkins@dev.indiedevshop.com"
+                     dev "rm -rf /var/www/temp_deploy"
+                     dev "mkdir -p /var/www/temp_deploy"
+                     scp --o StrictHostKeyChecking=no -r ../html jenkins@dev.indiedevshop.com:/var/www/temp_deploy/dist
+                     dev "rm -rf /var/www/example.com/dist/ && mv /var/www/temp_deploy/dist/ /var/www/example.com/"
+                '''
                 }
+                sh 'rm -rf ../html'
 						}
         }
     }
