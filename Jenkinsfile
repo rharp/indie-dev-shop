@@ -15,9 +15,10 @@ pipeline {
                 sh 'rm -rf ../html'
                 sh 'mkdir ../html'
                 sh 'cp -r ./ ../html'
-        	 			sshagent (['JenkinsSSHKey']) {
-									sh "ssh jenkins@dev.indiedevshop.com \"echo ${env.BUILD_ID}\""
-								}
+						 		sh 'ssh jenkins@dev.indiedevshop.com rm -rf /var/www/temp_deploy/dist/'
+						 		sh 'ssh jenkins@dev.indiedevshop.com mkdir -p /var/www/temp_deploy'
+						 		sh 'scp -r ../html jenkins@dev.indiedevshop.com:/var/www/temp_deploy/dist/'
+						 		sh 'ssh jenkins@dev.indiedevshop.com “rm -rf /var/www/example.com/dist/ && mv /var/www/temp_deploy/dist/ /var/www/example.com/”'
 						}
         }
     }
