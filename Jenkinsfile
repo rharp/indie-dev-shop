@@ -12,15 +12,15 @@ pipeline {
         stage('Transfering Files') {
         	 steps {
         				echo 'Transfering..'
-        				sh 'rm -rf ../builds/dev'
-                sh 'mkdir ../builds/dev'
+        				sh 'rm -rf ../dev'
+                sh 'mkdir ../dev'
                 sh 'cp -r ./ ../builds/dev'
         				sshagent(['JenkinsSSHKey']) {
                 	sh '''
                      alias dev="ssh -o StrictHostKeyChecking=no jenkins@dev.indiedevshop.com"
                      dev "rm -rf /var/www/temp_deploy"
                      dev "mkdir -p /var/www/temp_deploy"
-                     scp -o StrictHostKeyChecking=no -r ../builds/dev jenkins@dev.indiedevshop.com:/var/www/temp_deploy/dist
+                     scp -o StrictHostKeyChecking=no -r ../dev jenkins@dev.indiedevshop.com:/var/www/temp_deploy/dist
                      dev "rm -rf /var/www/example.com/dist/ && mv /var/www/temp_deploy/dist/ /var/www/html/"
                 '''
                 }
