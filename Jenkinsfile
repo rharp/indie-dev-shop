@@ -14,7 +14,7 @@ pipeline {
         				echo 'Transfering..'
         				sh 'rm -rf ../dev'
                 sh 'mkdir ../dev'
-                sh 'cp -r ./ ../builds/dev'
+                sh 'cp -r ./ ../dev'
         				sshagent(['JenkinsSSHKey']) {
                 	sh '''
                      alias dev="ssh -o StrictHostKeyChecking=no jenkins@dev.indiedevshop.com"
