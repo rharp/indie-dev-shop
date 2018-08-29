@@ -15,8 +15,8 @@ pipeline {
                 sh 'rm -rf ../html'
                 sh 'mkdir ../html'
                 sh 'cp -r ./ ../html'
-        	 			sshagent ( credentials: ['JenkinsSSHKey']) {
-        	 			sh 'ssh jenkins@dev.indiedevshop.com echo testing connection'
+        	 			sshagent (['JenkinsSSHKey']) {
+									sh "ssh jenkins@dev.indiedevshop.com \"echo ${env.BUILD_ID}\""
 								}
 						}
         }
