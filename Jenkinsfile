@@ -21,11 +21,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh '''
-										alias dev="ssh -o StrictHostKeyChecking=no ubuntu@dev.indiedevshop.com"
-										dev "sudo composer install"
-                '''
-            }
+                sshagent(['JenkinsSSHKey']) {
+									 sh '''
+												alias dev="ssh -o StrictHostKeyChecking=no ubuntu@dev.indiedevshop.com"
+												alias dev="ssh -o StrictHostKeyChecking=no ubuntu@dev.indiedevshop.com"
+												dev "sudo composer install"
+									'''
+            		}
+        		}
         }
         stage('Import Config') {
             steps {
@@ -36,7 +39,7 @@ pipeline {
                         dev "cat /var/www/html/drupal/config/sync/system.site.yml | grep uuid | tail -c +7 | head -c 36 | /var/www/html/drupal/vendor/bin/drush config-set -y system.site uuid - "
                         dev "/var/www/html/drupal/vendor/bin/drush config-import sync --yes"
                     '''
-                }
+               }
         		}
         }
         stage('Clear Cache') {
