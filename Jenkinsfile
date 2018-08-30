@@ -10,7 +10,8 @@ pipeline {
                 sh '''
 										alias dev="ssh -o StrictHostKeyChecking=no ubuntu@dev.indiedevshop.com"
 										dev "sudo rm -rf /var/www/html/drupal/*"
-										scp -o StrictHostKeyChecking=no -r ./ ubuntu@dev.indiedevshop.com:/var/www/html/drupal
+										scp -o StrictHostKeyChecking=no -r ./ ubuntu@dev.indiedevshop.com:~/tmp
+										dev "sudo mv ~/tmp/* /var/www/html/drupal/"
 										dev "sudo chown -R www-data:www-data /var/www/html/drupal/"
                     dev "sudo chmod -R 755 /var/www/html/drupal/"
                 '''
