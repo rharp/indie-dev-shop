@@ -15,8 +15,7 @@ pipeline {
 										scp -o StrictHostKeyChecking=no -r ./ ubuntu@dev.indiedevshop.com:~/tmp
 										dev "sudo mv ~/tmp/settings.php ~/tmp/web/sites/default/"
 										dev "sudo mv ~/tmp/* /var/www/html/drupal/"
-										dev "sudo rm -rf /var/www/html/drupal/web/sites/settings.local.php"
-										dev "sudo cp /var/www/html/drupal/web/sites/default.settings.php /var/www/html/drupal/web/sites/settings.php"
+										dev "sudo rm -rf ~/tmp/*"
 										dev "sudo chown -R www-data:www-data /var/www/html/drupal/"
                     dev "sudo chmod -R 755 /var/www/html/drupal/"
                 '''
