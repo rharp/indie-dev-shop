@@ -1,4 +1,9 @@
 ## Requirements
+
+MacOS, Linux, or Windows with Docker ToolBox
+
+> Support for native Windows systems is coming soon.
+
 Docker (https://www.docker.com/products/overview)
 
 > On systems that don't ship with docker-compose (Linux), it should also be installed.
