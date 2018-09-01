@@ -12,7 +12,11 @@ Docker (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installe
 6. Verify Docker installation `docker --version`
 
 
-GNU Make (https://www.gnu.org/software/make/)
+GNU Make (http://gnuwin32.sourceforge.net/packages/make.htm)
+
+1. run Setup Program install to default location
+2. Open Powershell
+3. run `new-item alias:make -value 'C:\Program Files (x86)\GnuWin32\bin\make.exe'`
 
 ## Usage
 
