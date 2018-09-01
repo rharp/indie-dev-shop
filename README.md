@@ -4,7 +4,7 @@ Windows with Docker ToolBox
 
 Docker Toolbox (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
 
-> 1. Run through the downloaded installer
+1. Run through the downloaded installer
 2 .Do not select to use Windows containers
 3. Enable and reboot for Hyper-V
 4. In Docker Settings, share a drive
