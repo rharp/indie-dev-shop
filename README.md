@@ -16,8 +16,7 @@ GNU Make (http://gnuwin32.sourceforge.net/packages/make.htm)
 
 1. run Setup Program
 2. Open Powershell
-3. run `new-item alias:make -value 'C:\Program Files (x86)\GnuWin32\bin\make.exe'` 
-- where the file path is equal to your installation path of gnumake.
+3. run `new-item alias:make -value 'C:\Program Files (x86)\GnuWin32\bin\make.exe'` where the file path is equal to your installation path of gnumake.
 
 ## Usage
 
