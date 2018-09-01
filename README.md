@@ -1,8 +1,8 @@
 ## Requirements
 
-Windows with Docker ToolBox
+Windows with Docker
 
-Docker Toolbox (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
+Docker (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
 
 1. Run through the downloaded installer
 2. Do not select to use Windows containers
