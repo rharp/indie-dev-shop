@@ -4,13 +4,12 @@ Windows with Docker ToolBox
 
 Docker Toolbox (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
 
->	Run through the downloaded installer
-Do not select to use Windows containers
-Enable and reboot for Hyper-V
-In Docker Settings, share a drive
-Open a Powershell window
-Verify Docker installation
-docker --version
+> 1. Run through the downloaded installer
+2 .Do not select to use Windows containers
+3. Enable and reboot for Hyper-V
+4. In Docker Settings, share a drive
+5. Open a Powershell window
+6. Verify Docker installation `docker --version`
 
 
 GNU Make (https://www.gnu.org/software/make/)
