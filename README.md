@@ -1,8 +1,5 @@
 ## Requirements
 Git CLI (https://git-scm.com/download)
-MacOS, Linux, or Windows with Docker ToolBox
-
-> Support for native Windows systems is coming soon.
 
 Docker (https://www.docker.com/products/overview)
 
