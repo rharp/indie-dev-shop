@@ -1,6 +1,4 @@
 ## Requirements
-Git CLI (https://git-scm.com/download)
-
 Docker (https://www.docker.com/products/overview)
 
 > On systems that don't ship with docker-compose (Linux), it should also be installed.
