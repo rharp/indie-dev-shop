@@ -12,9 +12,9 @@ Docker (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installe
 6. Verify Docker installation `docker --version`
 
 
-GNU Make (http://gnuwin32.sourceforge.net/downlinks/make.php)
+GNU Make (ftp://ftp.equation.com/make/64/make.exe)
 
-1. run Setup Program
+1. copy this to 
 2. Open Powershell
 3. run `new-item alias:make -value 'C:\Program Files (x86)\GnuWin32\bin\make.exe'` where the file path is equal to your installation path of gnumake.
 
