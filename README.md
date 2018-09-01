@@ -1,10 +1,8 @@
 ## Requirements
 
-MacOS, Linux, or Windows with Docker ToolBox
+Windows with Docker ToolBox
 
-> Support for native Windows systems is coming soon.
-
-Docker (https://www.docker.com/products/overview)
+Docker Toolbox (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
 
 > On systems that don't ship with docker-compose (Linux), it should also be installed.
 
