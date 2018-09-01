@@ -4,7 +4,14 @@ Windows with Docker ToolBox
 
 Docker Toolbox (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
 
-> On systems that don't ship with docker-compose (Linux), it should also be installed.
+>	Run through the downloaded installer
+Do not select to use Windows containers
+Enable and reboot for Hyper-V
+In Docker Settings, share a drive
+Open a Powershell window
+Verify Docker installation
+docker --version
+
 
 GNU Make (https://www.gnu.org/software/make/)
 
