@@ -12,7 +12,7 @@ Docker (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installe
 6. Verify Docker installation `docker --version`
 
 
-GNU Make (http://gnuwin32.sourceforge.net/packages/make.htm)
+GNU Make (http://gnuwin32.sourceforge.net/downlinks/make.php)
 
 1. run Setup Program
 2. Open Powershell
