@@ -2,7 +2,7 @@
 
 ## Setup Environment For Windows
 
-Use your favorite windows shell. I suggest * **Babun**(http://projects.reficio.org/babun/download)
+Use your favorite windows shell. I suggest **Babun**(http://projects.reficio.org/babun/download)
 
 * **Docker** (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
 
