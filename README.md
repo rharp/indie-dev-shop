@@ -1,6 +1,6 @@
-## Requirements
+# Requirements
 
-# Setup Environment For Windows
+## Setup Environment For Windows
 
 Use your favorite windows shell. I suggest Babun(http://projects.reficio.org/babun/download)
 
