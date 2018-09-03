@@ -2,9 +2,9 @@
 
 ## Setup Environment For Windows
 
-Use your favorite windows shell. I suggest Babun(http://projects.reficio.org/babun/download)
+Use your favorite windows shell. I suggest * **Babun**(http://projects.reficio.org/babun/download)
 
-Docker (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
+* **Docker** (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
 
 1. Run through the downloaded installer
 2. Do not select to use Windows containers
@@ -13,7 +13,7 @@ Docker (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installe
 5. Open a Powershell window
 6. Verify Docker installation `docker --version`
 
-PHP (https://windows.php.net/downloads/releases/php-7.2.9-nts-Win32-VC15-x64.zip)
+* **PHP** (https://windows.php.net/downloads/releases/php-7.2.9-nts-Win32-VC15-x64.zip)
 
 1. Download Visual C++ Redistributable for Visual Studio 2015
 		- `http://www.microsoft.com/en-us/download/details.aspx?id=48145`
@@ -23,7 +23,7 @@ PHP (https://windows.php.net/downloads/releases/php-7.2.9-nts-Win32-VC15-x64.zip
 4. Ensure the new version is installed
 		- `C:/PHP/php.exe --version`
 
-Composer (https://getcomposer.org/Composer-Setup.exe)
+* **Composer** (https://getcomposer.org/Composer-Setup.exe)
 
 1. Run the installer
 2. Select the PHP binary from the PHP’s installation path
