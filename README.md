@@ -1,6 +1,8 @@
 ## Requirements
 
-Windows with Docker
+# Setup Environment For Windows
+
+Use your favorite windows shell. I suggest Babun(http://projects.reficio.org/babun/download)
 
 Docker (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
 
@@ -11,12 +13,24 @@ Docker (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installe
 5. Open a Powershell window
 6. Verify Docker installation `docker --version`
 
+PHP (https://windows.php.net/downloads/releases/php-7.2.9-nts-Win32-VC15-x64.zip)
 
-GNU Make (ftp://ftp.equation.com/make/64/make.exe)
+1. Download Visual C++ Redistributable for Visual Studio 2015
+		- `http://www.microsoft.com/en-us/download/details.aspx?id=48145`
+2. Download Windows PHP 7.2 zip file
+		- `http://windows.php.net/download/`
+3. Extract everything in the PHP download to a new folder C:\PHP
+4. Ensure the new version is installed
+		- `C:/PHP/php.exe --version`
 
-1. copy this to 
-2. Open Powershell
-3. run `new-item alias:make -value 'C:\Program Files (x86)\GnuWin32\bin\make.exe'` where the file path is equal to your installation path of gnumake.
+Composer (https://getcomposer.org/Composer-Setup.exe)
+
+1. Run the installer
+2. Select the PHP binary from the PHP’s installation path
+		-	`C:\PHP\php.exe`
+3. Close and reopen the terminal window
+4. Ensure the new version is installed
+		-	`composer --version`
 
 ## Usage
 
